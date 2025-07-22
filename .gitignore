@@ -1,0 +1,63 @@
+# Ignore Python virtual environments
+venv
+venv1
+env
+venv1
+*.pyd
+*.pyc
+__pycache__/
+*.h5
+venv1/Lib/site-packages/tensorflow/python/_pywrap_tensorflow_internal.pyd
+
+# Ignore model checkpoints if you have them locally
+*.pkl
+*.h5
+*.pt
+*.pyd
+*.dll
+*.so
+*.log
+
+# Ignore system/cache/temp files
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+
+# Ignore database and others
+db.sqlite3
+*.sqlite3
+# Python virtual environments
+venv/
+venv1/
+env/
+.env
+
+# Python compiled files
+*.pyc
+*.pyo
+*.pyd
+_pycache_/
+*.py[cod]
+
+# Model files (usually large)
+*.pkl
+*.h5
+*.pt
+
+# System libraries (usually large)
+*.dll
+*.so
+
+# Logs
+*.log
+
+# Database files
+db.sqlite3
+*.sqlite3
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# IDE files
+.vscode/
+.idea/

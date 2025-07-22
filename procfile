@@ -1,0 +1,1 @@
+web: gunicorn cats_vs_dogs_api.wsgi --log-file -
