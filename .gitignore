@@ -39,9 +39,9 @@ env/
 _pycache_/
 *.py[cod]
 
+#*.h5
 # Model files (usually large)
 *.pkl
-*.h5
 *.pt
 
 # System libraries (usually large)
