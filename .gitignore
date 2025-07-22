@@ -9,9 +9,9 @@ __pycache__/
 *.h5
 venv1/Lib/site-packages/tensorflow/python/_pywrap_tensorflow_internal.pyd
 
+#*.h5
 # Ignore model checkpoints if you have them locally
 *.pkl
-*.h5
 *.pt
 *.pyd
 *.dll
