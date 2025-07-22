@@ -3,12 +3,12 @@ venv
 venv1
 env
 venv1
+#*.h5
 *.pyd
 *.pyc
-__pycache__/
-*.h5
-venv1/Lib/site-packages/tensorflow/python/_pywrap_tensorflow_internal.pyd
 
+__pycache__/
+venv1/Lib/site-packages/tensorflow/python/_pywrap_tensorflow_internal.pyd
 #*.h5
 # Ignore model checkpoints if you have them locally
 *.pkl
