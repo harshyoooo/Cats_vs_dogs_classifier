@@ -18,8 +18,8 @@ class PredictView(APIView):
             img_array = np.expand_dims(np.array(img) / 255.0, axis=0)
 
             prediction = model.predict(img_array)[0][0]
-            result = "Dog 🐶" if prediction > 0.5 else "Cat 🐱"
-            confidence = float(prediction) if prediction > 0.5 else 1 - float(prediction)
+            result = "Dog 🐶" if prediction > 0.7 else "Cat 🐱"
+            confidence = float(prediction) if prediction > 0.7 else 1 - float(prediction)
             
             return Response({
                 'prediction': result,
