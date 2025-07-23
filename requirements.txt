@@ -3,6 +3,6 @@ djangorestframework
 gunicorn
 Pillow
 numpy
-tensorflow==2.18.0
+tensorflow-cpu==2.18.0
 whitenoise
 dj-database-url
