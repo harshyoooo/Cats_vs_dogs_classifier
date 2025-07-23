@@ -20,4 +20,4 @@ COPY . /app/
 EXPOSE 8000
 
 # Run your Django app
-CMD ["gunicorn", "loan.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "cats_vs_dogs_api.wsgi:application", "--bind", "0.0.0.0:8000"]
