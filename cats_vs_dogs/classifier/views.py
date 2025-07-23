@@ -7,8 +7,16 @@ import numpy as np
 from PIL import Image
 import io
 from tensorflow.keras.models import load_model
+import os
+from django.conf import settings
+from tensorflow.keras.models import load_model
 
-model = load_model("classifier/models/cat_dog_classifier.h5")
+model_path = os.path.join(
+    settings.BASE_DIR, 'classifier', 'models', 'cat_dog_classifier.h5'
+)
+
+model = load_model(model_path)
+
 
 class PredictView(APIView):
     def post(self, request):
