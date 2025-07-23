@@ -4,21 +4,25 @@ FROM python:3.10-slim
 # Environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-ENV DJANGO_SETTINGS_MODULE=cats_vs_dogs_api.settings
 
-# Set working directory
+# Set working directory to /app
 WORKDIR /app
 
-# Install dependencies
+# First copy only requirements.txt from root
 COPY requirements.txt .
+
+# Install dependencies
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# Copy entire project
+# Now copy entire project
 COPY . .
+
+# Set working directory where manage.py is
+WORKDIR /app/cats_vs_dogs
 
 # Expose port
 EXPOSE 8000
 
-# Run the application using correct module path
+# Run Gunicorn from correct location
 CMD ["gunicorn", "cats_vs_dogs_api.wsgi:application", "--bind", "0.0.0.0:8000"]
