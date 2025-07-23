@@ -6,7 +6,9 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Set work directory
-WORKDIR /app
+COPY . /app/
+WORKDIR /app/cats_vs_dogs_api
+
 
 # Install dependencies
 COPY requirements.txt /app/
