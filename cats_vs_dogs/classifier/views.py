@@ -6,8 +6,9 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 import io
+from tensorflow.keras.models import load_model
 
-model = tf.keras.models.load_model('classifier/models/cat_dog_classifier.h5')
+model = load_model("classifier/models/cat_dog_classifier.h5")
 
 class PredictView(APIView):
     def post(self, request):
